@@ -1,0 +1,288 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16pt;
+  font-family: Poppins, sans-serif;
+  background-image: url('concrete_seamless.png'), linear-gradient(#f1f1f1, #f1f1f1);
+}
+
+header{
+  background: #fff;
+  border-bottom: 3px solid #50C7C7;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.nav_links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_links a {
+  color: #288088;
+  text-decoration: none;
+}
+
+.nav_links a:hover,
+.nav_links a:focus {
+  text-decoration: underline;
+}
+
+.nav_links a:visited {
+  color: #50C7C7;
+}
+
+h1{
+  font-size: 2em;
+  text-align: center;
+  line-height: 2;
+}
+
+h2{
+  font-size: 1.5em;
+  text-align: center;
+  padding: 5px;
+}
+
+p {
+  font-size: 15px;
+  padding: 0 30px;
+}
+
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+.nav_item a{
+  padding: 10px;
+}
+
+.nav_item a:hover, a:focus{
+  color: #50C7C7;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+.pricing{
+  min-height: 475px;
+  justify-content: center;
+  align-content: center;
+}
+
+.card {
+  margin: 12px auto;
+  background: #fff;
+  width: 450px;
+  border-radius: 50px 50px 7px 7px;
+  padding: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.card > ul{
+  list-style: none;
+  padding-left: 5px;
+}
+
+.card > ul li {
+  font-size: 20px;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.card > header {
+  background: #288088;
+  border: 2px solid #45ADAD;
+  width: 450px;
+  padding: 20px 0;
+  border-radius: 50px 50px 0 0;
+}
+
+.card button{
+  width: 90%;
+  height: 40px;
+  border: 0;
+  border-radius: 7px;
+  background: #288080;
+  color: white;
+  font-size: 1em;
+}
+
+.card h3{
+  font-size: 70px;
+  color: white;
+  text-align: center;
+}
+
+.card h4{
+  font-size: 18px;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery img {
+  width: 300px;
+  margin: 10px;
+  border: 10px solid #50C7C7;
+  border-radius: 7px;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+@keyframes logoanimation {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+#logo {
+  animation: logoanimation 5s ease-out;
+}
+
+@media (min-width: 900px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .pricing {
+    display: flex;
+    height: auto;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+    background: #fff;
+    border-radius: 50px 50px 7px 7px;
+    padding: 0 0 25px 0;
+    position: relative;
+  }
+
+  .card > header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
+    color: white;
+  }
+
+  .card h4{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .card button {
+    width: 80%;
+    height: 40px;
+    border: 0;
+    margin: 20px 0;
+    border-radius: 7px;
+    background: #288080;
+    color: white;
+    font-size: 20px;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    text-align: start;
+  }
+
+  .card ul li {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo {
+    animation: none;
+  }
+}
+
+@media print and (orientation: portrait) {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: none;
+  }
+
+  .nav_links {
+    gap: 10px;
+  }
+
+  .pricing {
+    align-items: flex-end;
+  }
+
+  .card {
+    border: 2px solid #45ADDD;
+    flex-basis: 325px;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .thumbs-up::before {
+    content: '\1F44D';
+    font-size: 1.5em;
+    color: yellow;
+  }
+}
